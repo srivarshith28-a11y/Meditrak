@@ -1,0 +1,146 @@
+:root {
+  --bg: #f3f7f8;
+  --surface: #ffffff;
+  --ink: #102129;
+  --muted: #5e7077;
+  --line: #d7e3e5;
+  --mint: #1ea896;
+  --blue: #246bce;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--ink);
+  background: linear-gradient(180deg, #f8fbfc 0%, #eef5f7 100%);
+}
+
+a { color: var(--blue); text-decoration: none; }
+code { background: #eef6f6; padding: 0.1rem 0.35rem; border-radius: 0.3rem; }
+
+.topbar, .page-grid, .split-page, .form-page {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.topbar {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem 0 1rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--mint);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+
+h1, h2 { margin: 0 0 0.75rem; }
+.lead, .muted, .message { color: var(--muted); }
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.page-grid {
+  display: grid;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.split-page {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 1rem;
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.form-page {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  box-shadow: 0 12px 36px rgba(16, 33, 41, 0.08);
+}
+
+.hero-card { margin-top: 1rem; }
+
+.flow-grid, .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.flow-grid div, .stat-card {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #f4fbfa;
+  border: 1px solid #d9ece9;
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 1.6rem;
+}
+
+.form-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.stack-form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+input, select, textarea, button {
+  font: inherit;
+  padding: 0.85rem 0.95rem;
+  border: 1px solid var(--line);
+  border-radius: 0.8rem;
+}
+
+button {
+  border: 0;
+  background: var(--mint);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+  .flow-grid, .stats-grid, .split-page {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,26 @@
+
+# Java / Spring Boot
+**/target/
+*.class
+*.jar
+
+# React / Node
+**/node_modules/
+**/dist/
+
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+
+# Database backups and dumps
+*.sql
+*.sql.gz
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
